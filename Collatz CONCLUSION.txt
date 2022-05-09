@@ -1,0 +1,23 @@
+In conclusion, to answer the Collatz Conjecture, my answer is YES. All positive integers will eventually reach 1.
+
+My proof - In order for a number to not reach 1, there would have to be an infinite loop
+with a number other than 1.
+ A loop does not exist where the final digits of the integers are 1, 4, 2, 1 as is the case with the Classic Loop.
+ The collatz function produces more EVEN numbers than it does ODD numbers, thus causing it to naturally regress.
+ If you only examine the final digit of any positive integer, the collatz function will yield an even number in 7.5/10 cases.
+ A guaranteed even from an odd input, and a 50/50 shot at an even from an even input.
+
+Even when the Collatz Conjecture spikes and reaches high numbers, it's because of a pattern like this:
+ODD: 175
+EVEN: 526
+ODD: 263
+EVEN: 790
+ODD: 395
+EVEN: 1186
+ODD: 593
+EVEN: 1780
+The best shot the Collatz has at growth is through a pattern of ODD, EVEN, ODD, EVEN, ODD, EVEN. It is impossible to get a pattern
+ such as ODD, ODD, ODD. An ODD number will always yield a positive results.
+These growth spurts cannot extend forever. EVEN numbers aren't guaranteed to produce ODD numbers. They only produce them half of the time.
+2 or more EVEN's in a row only stunts the potential growth of the sequence and brings it closer to 1.
+ Through examination of the final digit of any given positive integer, I believe it's clear to see that all numbers will lead to 1.

@@ -1,0 +1,44 @@
+Does the Collatz sequence eventually reach 1 for all positive integer initial values?
+Yes or No
+Prove Your Answer
+
+Once a Number does reach 1, this loop happens
+collatz(1) = 4 - EVEN
+collatz(4) = 2 - EVEN
+collatz(2) = 1 - ODD
+collatz(1) = 4 - EVEN
+I will refer to this loop as the "Classic Loop"
+
+In order for another loop to happen at another positive integer, it would have to follow the pattern of EVEN, EVEN, ODD, EVEN.
+Consider this
+collatz(17) = 52 - EVEN
+collatz(52) = 26 - EVEN
+collatz(26) = 13 - ODD
+collatz(13) = 40 - EVEN
+This does not yield the same infinite loop as before. The first collatz() and the fourth collatz() are different.
+If another loop does exist. The first and fourth collatz() would have the same parameter.
+
+Let's examine other EVEN, EVEN, ODD, EVEN groups in the pattern and compare the first and fourth.
+collatz(121) = 364 - EVEN
+collatz(364) = 182 - EVEN
+collatz(182) = 91 - ODD
+collatz(91) = 274 - EVEN
+This pattern is similar to the classic loop. The ending digit of each number is the same. However, the final number, 274 
+is smaller than the first number, 364. These numbers will spiral down to the classic loop.
+
+Here's another EVEN, EVEN, ODD, EVEN group with matching end digits
+collatz(241) = 724 - EVEN
+collatz(724) = 362 - EVEN
+collatz(362) = 181 - ODD
+collatz(181) = 544 - EVEN
+This pattern's final number, 544 is smaller than the first number, 724. It'll spiral down, and as a matter of fact, the next five calls of
+collatz() are all even numbers sending it down very quickly. 544, 272, 136, 68, 34
+
+For a third pattern with matching end digits, I'll start with 361. These patterns with matching end digits seem to appear at 1, 121, 241, 361, ....
+every 1 + 120n will yield a pattern with matching end digits.
+collatz(361) = 1084
+collatz(1084) = 542
+collatz(542) = 271
+collatz(271) = 814
+Once again a loop fails to form. 814, the final number is smaller than the result of the first collatz() call, 1084. This loop is doomed
+to spiral down to 1.
