@@ -21,3 +21,17 @@ The best shot the Collatz has at growth is through a pattern of ODD, EVEN, ODD, 
 These growth spurts cannot extend forever. EVEN numbers aren't guaranteed to produce ODD numbers. They only produce them half of the time.
 2 or more EVEN's in a row only stunts the potential growth of the sequence and brings it closer to 1.
  Through examination of the final digit of any given positive integer, I believe it's clear to see that all numbers will lead to 1.
+
+
+Also, you can transpose this function to change the number that it loops at.
+
+naughty_collatz(x):
+	if (x % 2 == 0):
+		x = x // 2
+	elif ( x % 2 == 1):
+		x = 3 * x + 69
+
+The naughty_collatz function will loop between 276, 138, and 69
+
+There is no other looping point at some absurdly high positive integer. The function can only loop
+at the plus value when dealing with an ODD parameter.
